@@ -4,13 +4,14 @@
 
 N = int(input("Введите число N: "))
 sum = 2
-number = 1
+# number = 1
 if sum <= N:
+    print(sum)
     while sum < N:
-        sum = sum ** number
+        sum = sum * 2
         if sum < N:
             print(sum)
-            number = number + 1
+        # number = number + 1
 
 else :
     print("не верное значение")
