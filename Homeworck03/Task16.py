@@ -11,3 +11,13 @@
 #     1 2 3 4 5
 #     3
 #     -> 1
+
+import time
+import random
+x = int(input("Введите число: "))
+some_list = [random.randint(1, 100) for _ in range(1000)]
+
+start = time.perf_counter()
+print(some_list.count(x))
+end = time.perf_counter()
+first = end - start
