@@ -7,17 +7,21 @@
 #     1 2 3 4 5
 #     6
 #     -> 5
-import time
+# import time
 import random
 x = int(input("Введите количество элементов в массиве: "))
 some_list = [random.randint(1, 100) for _ in range(x)]
 print(some_list)
 number = int(input("Введите число: "))
-difrens = x
-for i in some_list:
-    if i - x < difrens:
-        difrens = i
-print(difrens)
+difrens = some_list[0]
+DifNum2 = some_list[0]
+for i in range(x):
+    DifNum = abs(number - some_list[i])
+    
+    if DifNum < difrens:
+        TheNumber = some_list[i]
+        difrens = DifNum
+print(TheNumber)
         
 
 
