@@ -4,10 +4,10 @@
 
 
 superString = input("Введите буквы: ")
-sumList = ()
+sumList = []
 sum = 0
 L = 0
-letter = "ab"
+letter = "a"
 for i in superString:
     L += 1
     if i == letter and L < len(superString):
@@ -16,11 +16,11 @@ for i in superString:
     elif i == letter and L == len(superString):
         sum += 1
         sumList.append(letter)
-        sumList.append(sum)
+        sumList.append(str(sum))
     elif i != letter and L == len(superString):
         sumList.append(letter)
         if sum > 1:
-            sumList.append(sum)
+            sumList.append(str(sum))
         sumList.append(i)
     
     else:
@@ -31,10 +31,7 @@ for i in superString:
             sumList.append(letter)
             letter = i
             if sum > 1:
-                sumList.append(sum)
+                sumList.append(str(sum))
             sum = 1
         
-
-
-
 print(sumList)
