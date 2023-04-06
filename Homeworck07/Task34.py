@@ -17,10 +17,7 @@ ListOfLetters = ["а", "е", "ё", "и", "о", "у", "ы", "э", "ю", "я"]
 some_list = input("Введите стихотворение: ")
 some_list = some_list.split()
 print(some_list)
-some_N = ""
-num = 0
 num2 = 0
-nul = " "
 for i in some_list:
     num = 0
     if some_list.index(i) == len(some_list) - 1:
