@@ -12,36 +12,30 @@
 #     **Вывод:** Парам пам-пам  
 
 
-ListOfLetters = "аеёиоуыэюя"
+ListOfLetters = ["а", "е", "ё", "и", "о", "у", "ы", "э", "ю", "я"]
 
 some_list = input("Введите стихотворение: ")
+some_list = some_list.split()
 print(some_list)
 some_N = ""
 num = 0
 num2 = 0
+nul = " "
 for i in some_list:
-    if i == some_list(len(some_list) - 1):
-        some_N += i
-        for x in some_N:
-            
-            if ListOfLetters.find(x) != -1:
+    num = 0
+    if some_list.index(i) == len(some_list) - 1:
+        for x in i:
+            if x in ListOfLetters:
                 num += 1
         if num == num2:
             print("Парам пам-пам")
         elif num2 != num:
             print("Пам парам")
     else:
-        if i == " ":
-            for x in some_N:
-                # for y in ListOfLetters:
-                #     if x == y:
-                if ListOfLetters.find(x) != -1:
-                    num += 1
-            if num2 == 0 or num == num2:
-                num2 = num
-                some_N = ""
-            elif num2 != num:
-                print("Пам парам")
-        else:
-            some_N += i
-
+        for x in i:
+            if x in ListOfLetters:
+                num += 1
+        if num2 == 0 or num == num2:
+            num2 = num
+        elif num2 != num:
+            print("Пам парам")
