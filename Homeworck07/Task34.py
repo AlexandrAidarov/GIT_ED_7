@@ -36,3 +36,5 @@ for i in some_list:
             num2 = num
         elif num2 != num:
             print("Пам парам")
+            
+# if len(set(phrase)) == 1
