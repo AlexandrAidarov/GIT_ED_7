@@ -10,7 +10,7 @@ def rewrite_data():
     tel_boock = search2(tel_boock, data1, data2)
     
     with open('boock.txt', 'w', encoding='utf-8') as f:
-        f.write(tel_boock)
+        f.write('\n'.join([post for post in tel_boock]))
     print('Успешно')
     
 def search2(boock: str, info1, info2) -> str:
@@ -19,8 +19,8 @@ def search2(boock: str, info1, info2) -> str:
     for i in boock:
         if info1 in i:
             i = info2
-        boock1 += i    
-    return boock1
+        # boock1 += i    
+    return boock
 
 
 
